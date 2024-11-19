@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root{
+    --color-p: #C70039;
+    --color-s: #ffffff;
+    --color-t: #FBD288;
+    --color-c:  #ffaa90;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: var(--color-p);
+    border-bottom: 2px solid black;
+}
+
+nav{
+    width: 50%;
+}
+header ul{
+    display: flex;
+    margin: 0;
+}
+
+header ul li{
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+header li:hover{
+    transform: scale(1.1);
+}
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+/* color, posición, pading y display del link */
+.linkanimado{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    position: relative; 
+    display: inline-block; /* permite que link actue como un bloque */
+    padding-bottom: 2px;
+}
+
+/* Animación del texto antes de que el mouse se posicione sobre el */
+.linkanimado::before{
+    content: "";
+    position: absolute; /* Se posiciona por encima del .linkanimado */
+    bottom: 0; /* Posiciona el subrayado debajo del texto */
+    left: 50%; /* Hace que el subrayado empiece en el centro */
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease, left 0.3s ease; /* Animación width va a tardar 0.3s en estar al 100% del ancho y left en estar a 0 px */
+}
+
+/* Cambio de ancho y left cuando el mouse esta sobre el link */
+.linkanimado:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+#inicio{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-s);
+    justify-content: center;
+    width: 100%;
+}
+
+#datos-personales{
+    text-align: center;
+    margin: 20px;
+}
+h1{
+    margin: 2px;
+    font-size: 30px;
+}
+#descripcion p{
+    font-size: 18px;
+}
+h2{
+    margin: 2px;
+    font-size: 20px;
+}
+
+p{
+    font-size: 15px;
+}
+
+#foto{
+    width: 100%;
+    height: 303px;
+}
+
+#foto img{
+    margin: 40px;
+    margin-top: 5px;
+    border: 5px solid black;
+    border-radius: 150px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#descripcion{
+    max-width: 400px;
+    margin: 20px;
+    padding: 30px;
+    font-size: 20px;
+}
+
+
+#info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--color-s);
+}
+
+#Educ , #Perfil-prof , #habilidades{
+    margin: 5%;
+    padding: 25px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--color-c);
+}
+
+ul{
+    padding: 0 40px 0 40px;
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+#skills-imgs{
+    display:flex;
+    justify-content: left;
+}
+
+#skills img{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+#proyectos{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 500px;
+    background-color: var(--color-c);
+    justify-content: center;
+}
+
+#titulo-proyectos{
+    width: 100%;
+    text-align: center;
+}
+
+#freedom{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+}
+
+
+#freedom img{
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+#freedom img:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px black;
+}
+#form-contacto{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-s);
+    justify-content: center;
+}
+
+#contacto{
+    margin: 5%;
+    padding: 25px;
+    width: 300px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 15px;
+    background-color: var(--color-c);
+}
+
+#contacto #email , #contacto #tel{
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#contacto p{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+}
+
+#contacto #email img , #contacto #tel img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    width: 500px;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: var(--color-c);
+}
+
+#form form input , #form form textarea{
+    width: 90%;
+    border: 2px, solid, black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    background-color: white;
+    color: black;
+    transition: transform 0.5s ease;
+}
+
+input:hover , textarea:hover{
+    transform: scale(1.05);
+}
+
+button{
+    background-color: white;
+    color: black;
+    width: 95%;
+    border: 2px, solid;
+    border-radius: 5px;
+    padding: 8px;
+    margin: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+button:hover{
+    transform: scale(1.05);
+    background: var(--color-p);
+    color: white;
+}
